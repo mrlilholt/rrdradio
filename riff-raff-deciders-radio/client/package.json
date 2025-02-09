@@ -5,10 +5,11 @@
   "description": "A streaming radio station application.",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "if [ -d \"node_modules/es5-ext/array/#\" ]; then mv node_modules/es5-ext/array/# node_modules/es5-ext/array/underscore; fi"
   },
   "keywords": [
     "radio",

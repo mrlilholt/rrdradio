@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getFirestore, collection, query, where, getDocs } from 'firebase/firestore';
 import { app } from '../firebaseConfig';
 
-const whitelist = ['addison.lilholt@gmail.com', 'ksryan85@gmail.com']; // Array storing whitelisted emails
+const whitelist = ['addison.lilholt@gmail.com', 'ksryan85@gmail.com', 'dancomly@gmail.com']; // Array storing whitelisted emails
 
 const UploadSection = ({ currentUserEmail }) => {
     const [isWhitelisted, setIsWhitelisted] = useState(false);

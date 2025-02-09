@@ -18,6 +18,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Use JSON body parser middleware if needed
+app.use(express.json());
+
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/riff-raff-deciders-radio', {
     useNewUrlParser: true,
@@ -29,6 +32,9 @@ mongoose.connect('mongodb://localhost/riff-raff-deciders-radio', {
 // API Routes
 app.use('/api', apiRoutes);
 app.use('/api/cloudinary', cloudinaryRoutes);
+
+// Mount the API routes under your chosen path (e.g., /api)
+app.use('/api', apiRouter);
 
 console.log("Cloud name:", process.env.CLOUDINARY_CLOUD_NAME);
 

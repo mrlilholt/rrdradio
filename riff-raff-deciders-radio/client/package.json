@@ -9,7 +9,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "if [ -d \"node_modules/es5-ext/array/#\" ]; then mv node_modules/es5-ext/array/# node_modules/es5-ext/array/underscore; fi"
+    "postinstall": "find node_modules -depth -name '*#*' | while read d; do newname=$(dirname \"$d\")/$(basename \"$d\" | tr '#' '_'); mv \"$d\" \"$newname\"; done"
   },
   "keywords": [
     "radio",

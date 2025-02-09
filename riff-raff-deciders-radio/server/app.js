@@ -34,7 +34,7 @@ app.use('/api', apiRoutes);
 app.use('/api/cloudinary', cloudinaryRoutes);
 
 // Mount the API routes under your chosen path (e.g., /api)
-app.use('/api', apiRouter);
+app.use('/api', apiRoutes);
 
 console.log("Cloud name:", process.env.CLOUDINARY_CLOUD_NAME);
 
